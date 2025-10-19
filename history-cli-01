@@ -24,3 +24,9 @@
    24  sudo chmod 755 kubebuilder/bin/cloud-controller-manager
    25  pwd
    26  history >> history-cli-01
+    1  sudo cp /root/.kube/config /var/lib/kubelet/kubeconfig
+    2  export KUBECONFIG=~/.kube/config
+    3  cp /tmp/sa.pub /tmp/ca.crt
+    4  sudo kubebuilder/bin/kubectl create sa default
+    5  sudo kubebuilder/bin/kubectl create configmap kube-root-ca.crt --from-file=ca.crt=/tmp/ca.crt -n default
+    6  history >> history-cli-01 

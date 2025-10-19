@@ -239,7 +239,7 @@ sudo PATH=$PATH:/opt/cni/bin:/usr/sbin kubebuilder/bin/kubelet \
     --node-ip=$HOST_IP \
     --cloud-provider=external \
     --cgroup-driver=cgroupfs \
-    --max-pods=4  \
+    --max-pods=10  \
     --v=1 &
 ```
 
