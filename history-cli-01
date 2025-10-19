@@ -1,0 +1,26 @@
+    1  git status 
+    2  git add .
+    3  git commit -m "initial"
+    4  git push
+    5  curl -L https://storage.googleapis.com/kubebuilder-tools/kubebuilder-tools-1.30.0-linux-amd64.tar.gz -o /tmp/kubebuilder-tools.tar.gz
+    6  sudo tar -C ./kubebuilder --strip-components=1 -zxf /tmp/kubebuilder-tools.tar.gz
+    7  rm /tmp/kubebuilder-tools.tar.gz
+    8  sudo chmod -R 755 ./kubebuilder/bin
+    9  sudo curl -L "https://dl.k8s.io/v1.30.0/bin/linux/amd64/kubelet" -o kubebuilder/bin/kubelet
+   10  sudo chmod 755 kubebuilder/bin/kubelet
+   11  wget https://github.com/containerd/containerd/releases/download/v2.0.5/containerd-static-2.0.5-linux-amd64.tar.gz -O /tmp/containerd.tar.gz
+   12  sudo tar zxf /tmp/containerd.tar.gz -C /opt/cni/
+   13  rm /tmp/containerd.tar.gz
+   14  sudo curl -L "https://github.com/opencontainers/runc/releases/download/v1.2.6/runc.amd64" -o /opt/cni/bin/runc
+   15  sudo chmod +x /opt/cni/bin/runc
+   16  wget https://github.com/containernetworking/plugins/releases/download/v1.6.2/cni-plugins-linux-amd64-v1.6.2.tgz -O /tmp/cni-plugins.tgz
+   17  sudo tar zxf /tmp/cni-plugins.tgz -C /opt/cni/bin/
+   18  rm /tmp/cni-plugins.tgz
+   19  sudo curl -L "https://dl.k8s.io/v1.30.0/bin/linux/amd64/kube-controller-manager" -o kubebuilder/bin/kube-controller-manager
+   20  sudo curl -L "https://dl.k8s.io/v1.30.0/bin/linux/amd64/kube-scheduler" -o kubebuilder/bin/kube-scheduler
+   21  sudo curl -L "https://dl.k8s.io/v1.30.0/bin/linux/amd64/cloud-controller-manager" -o kubebuilder/bin/cloud-controller-manager
+   22  sudo chmod 755 kubebuilder/bin/kube-controller-manager
+   23  sudo chmod 755 kubebuilder/bin/kube-scheduler
+   24  sudo chmod 755 kubebuilder/bin/cloud-controller-manager
+   25  pwd
+   26  history >> history-cli-01
