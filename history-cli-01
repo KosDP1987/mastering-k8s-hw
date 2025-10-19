@@ -30,3 +30,15 @@
     4  sudo kubebuilder/bin/kubectl create sa default
     5  sudo kubebuilder/bin/kubectl create configmap kube-root-ca.crt --from-file=ca.crt=/tmp/ca.crt -n default
     6  history >> history-cli-01 
+    1  sudo kubebuilder/bin/kubectl get all -A
+    2  sudo kubebuilder/bin/kubectl get nodes -o wide
+    3  sudo kubebuilder/bin/kubectl describe node codespaces-8e4628 | grep -i taints
+    4  sudo kubebuilder/bin/kubectl get all -A -w
+    5  sudo kubebuilder/bin/kubectl get pods -A -w
+    6  sudo kubebuilder/bin/kubectl get pods -A
+    7  sudo kubebuilder/bin/kubectl get all -A
+    8  sudo kubebuilder/bin/kubectl taint nodes codespaces-8e4628 node.cloudprovider.kubernetes.io/uninitialized=true:NoSchedule-
+    9  sudo kubebuilder/bin/kubectl get pods -A -w
+   10  sudo kubebuilder/bin/kubectl get all -A
+   11  sudo kubebuilder/bin/kubectl logs demo-677cfb9d49-dfwps
+   12  history >> history-cli-01 
