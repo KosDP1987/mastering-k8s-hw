@@ -1,0 +1,81 @@
+=== Неймспейс: default ===
+Поди:
+Сервіси:
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   11m
+Деплойменти:
+---
+=== Неймспейс: envoy-gateway-system ===
+Поди:
+NAME                             READY   STATUS    RESTARTS   AGE     IP            NODE                             NOMINATED NODE   READINESS GATES
+envoy-gateway-7965869f95-nhn4d   1/1     Running   0          6m37s   10.244.0.13   learning-cluster-control-plane   <none>           <none>
+Сервіси:
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                   AGE
+envoy-gateway   ClusterIP   10.96.140.221   <none>        18000/TCP,18001/TCP,18002/TCP,19001/TCP   6m37s
+Деплойменти:
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+envoy-gateway   1/1     1            1           6m37s
+---
+=== Неймспейс: flux-system ===
+Поди:
+NAME                                           READY   STATUS    RESTARTS   AGE     IP            NODE                             NOMINATED NODE   READINESS GATES
+flux-operator-588f764cd5-vg58t                 1/1     Running   0          9m34s   10.244.0.5    learning-cluster-control-plane   <none>           <none>
+helm-controller-6655757cd-x2mqg                1/1     Running   0          7m48s   10.244.0.8    learning-cluster-control-plane   <none>           <none>
+image-automation-controller-67cb88968f-vb6p8   1/1     Running   0          7m48s   10.244.0.6    learning-cluster-control-plane   <none>           <none>
+image-reflector-controller-5b886854c8-nmq82    1/1     Running   0          7m48s   10.244.0.10   learning-cluster-control-plane   <none>           <none>
+kustomize-controller-6d987fd864-c57dd          1/1     Running   0          7m48s   10.244.0.11   learning-cluster-control-plane   <none>           <none>
+notification-controller-69c95f574c-9jx7f       1/1     Running   0          7m48s   10.244.0.7    learning-cluster-control-plane   <none>           <none>
+source-controller-9fdbcc785-hpx6v              1/1     Running   0          7m48s   10.244.0.9    learning-cluster-control-plane   <none>           <none>
+Сервіси:
+NAME                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+flux-operator             ClusterIP   10.96.7.107     <none>        8080/TCP   9m34s
+notification-controller   ClusterIP   10.96.169.150   <none>        80/TCP     7m48s
+source-controller         ClusterIP   10.96.49.188    <none>        80/TCP     7m48s
+webhook-receiver          ClusterIP   10.96.77.86     <none>        80/TCP     7m48s
+Деплойменти:
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+flux-operator                 1/1     1            1           9m34s
+helm-controller               1/1     1            1           7m48s
+image-automation-controller   1/1     1            1           7m48s
+image-reflector-controller    1/1     1            1           7m48s
+kustomize-controller          1/1     1            1           7m48s
+notification-controller       1/1     1            1           7m48s
+source-controller             1/1     1            1           7m48s
+---
+=== Неймспейс: kube-node-lease ===
+Поди:
+Сервіси:
+Деплойменти:
+---
+=== Неймспейс: kube-public ===
+Поди:
+Сервіси:
+Деплойменти:
+---
+=== Неймспейс: kube-system ===
+Поди:
+NAME                                                     READY   STATUS    RESTARTS   AGE   IP           NODE                             NOMINATED NODE   READINESS GATES
+coredns-6f6b679f8f-5x8lm                                 1/1     Running   0          11m   10.244.0.3   learning-cluster-control-plane   <none>           <none>
+coredns-6f6b679f8f-zlcws                                 1/1     Running   0          11m   10.244.0.4   learning-cluster-control-plane   <none>           <none>
+etcd-learning-cluster-control-plane                      1/1     Running   0          11m   172.18.0.2   learning-cluster-control-plane   <none>           <none>
+kindnet-8xclz                                            1/1     Running   0          11m   172.18.0.2   learning-cluster-control-plane   <none>           <none>
+kube-apiserver-learning-cluster-control-plane            1/1     Running   0          11m   172.18.0.2   learning-cluster-control-plane   <none>           <none>
+kube-controller-manager-learning-cluster-control-plane   1/1     Running   0          11m   172.18.0.2   learning-cluster-control-plane   <none>           <none>
+kube-proxy-dvdgp                                         1/1     Running   0          11m   172.18.0.2   learning-cluster-control-plane   <none>           <none>
+kube-scheduler-learning-cluster-control-plane            1/1     Running   0          11m   172.18.0.2   learning-cluster-control-plane   <none>           <none>
+Сервіси:
+NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                  AGE
+kube-dns   ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP,9153/TCP   11m
+Деплойменти:
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+coredns   2/2     2            2           11m
+---
+=== Неймспейс: local-path-storage ===
+Поди:
+NAME                                      READY   STATUS    RESTARTS   AGE   IP           NODE                             NOMINATED NODE   READINESS GATES
+local-path-provisioner-57c5987fd4-njgrq   1/1     Running   0          11m   10.244.0.2   learning-cluster-control-plane   <none>           <none>
+Сервіси:
+Деплойменти:
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+local-path-provisioner   1/1     1            1           11m
+---
