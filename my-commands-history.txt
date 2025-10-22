@@ -5,3 +5,61 @@
     5  k get po
     6  k get po -A
     7  history > my-commands-history.txt
+    1  history
+    2  pwd
+    3  k get po
+    4  alias k=kubectl
+    5  k get po
+    6  k get po -A
+    7  history > my-commands-history.txt
+    8  git add .
+    9  git commit -m "added my-command-history"
+   10  git push
+   11  clear
+   12  helm upgrade --install flux-operator oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator --namespace flux-system --create-namespace
+   13  k get po -A
+   14  k apply -f flux-instance.yml
+   15  k apply -f ./gitless/Fluxinstance.yml
+   16  ls
+   17  ls gitless/
+   18  k apply -f ./gitless/FluxInstance.yml
+   19  k apply -f ./gitless/FluxInstance.yaml
+   20  k get fluxinstance -n flux-system
+   21  k describe fluxinstance flux -n flus-system
+   22  k describe fluxinstance flux -n flux-system
+   23  k get pods -n flux-system -l app=flux
+   24  k get pods -n flux-system 
+   25  history >> my-commands-history.txt 
+    1  history
+    2  pwd
+    3  k get po
+    4  alias k=kubectl
+    5  k get po
+    6  k get po -A
+    7  history > my-commands-history.txt
+    8  git add .
+    9  git commit -m "added my-command-history"
+   10  git push
+   11  clear
+   12  helm upgrade --install flux-operator oci://ghcr.io/controlplaneio-fluxcd/charts/flux-operator --namespace flux-system --create-namespace
+   13  k get po -A
+   14  k apply -f flux-instance.yml
+   15  k apply -f ./gitless/Fluxinstance.yml
+   16  ls
+   17  ls gitless/
+   18  k apply -f ./gitless/FluxInstance.yml
+   19  k apply -f ./gitless/FluxInstance.yaml
+   20  k get fluxinstance -n flux-system
+   21  k describe fluxinstance flux -n flus-system
+   22  k describe fluxinstance flux -n flux-system
+   23  k get pods -n flux-system -l app=flux
+   24  k get pods -n flux-system 
+   25  history >> my-commands-history.txt 
+   26  cat my-commands-history.txt 
+   27  clear
+   28  helm install envoy-gateway oci://docker.io/envoyproxy/gateway-helm --version v1.3.2 --namespace envoy-gateway-system --create-namespace
+   29  k get names
+   30  л пуе ті
+   31  k get ns
+   32  k apply -f gateway.yml 
+   33  history >> my-commands-history.txt 
