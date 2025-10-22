@@ -1,0 +1,7 @@
+    1  history
+    2  pwd
+    3  k get po
+    4  alias k=kubectl
+    5  k get po
+    6  k get po -A
+    7  history > my-commands-history.txt
