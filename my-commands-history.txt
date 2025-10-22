@@ -63,3 +63,27 @@
    31  k get ns
    32  k apply -f gateway.yml 
    33  history >> my-commands-history.txt 
+    1  alias k = kubectl
+    2  alias k=kubectl
+    3  k get ns
+    4  git status
+    5  controller-gen object paths="./api/..."
+    6  go mod tidy
+    7  go mod init github.com/den-vasyliev/mastering-k8s/new-controller
+    8  go mod tidy
+    9  go mod init github.com/KosDP1987/mastering-k8s-hw/tree/main/new-controller
+   10  controller-gen object paths="./api/..."
+   11  cd new-controller/
+   12  ls
+   13  go mod init github.com/KosDP1987/mastering-k8s-hw/new-controller
+   14  go install sigs.k8s.io/controller-tools/cmd/controller-gen@latest
+   15  controller-gen object paths="./api/..."
+   16  go mod tidy
+   17  find . -name "*.go" -exec sed -i 's|github.com/mastering-k8s/new-controller|github.com/KosDP1987/mastering-k8s-hw/new-controller|g' {} +
+   18  go mod tidy
+   19  go build ./...
+   20  controller-gen object paths="./api/..."
+   21  controller-gen crd:crdVersions=v1 paths=./... output:crd:artifacts:config=config/crd/bases
+   22  cd ..
+   23  ls
+   24  history >> my-commands-history.txt 
